@@ -1,10 +1,11 @@
 .container {
   margin: 50px 0;
   .card {
+  //  display: none;
     margin: 10px 20px !important;
     border-radius: 50%;
     text-align: center;
-    padding: -10px!important;
+    padding: -10px !important;
     background: #ffffff;
     box-shadow: inset 3px 3px 5px #d9d9d9, inset -3px -3px 5px #ffffff;
   }
@@ -19,5 +20,10 @@
   .death {
     border-bottom: 10px solid rgba(255, 0, 0, 0.8) !important;
     // border-top: 10px solid rgba(255, 0, 0, 0.8) !important;
+  }
+}
+@media (max-width: 770px) {
+  .container {
+    width: 70% !important;
   }
 }
