@@ -1,6 +1,6 @@
 Hosted on : 
 ```
-https://unruffled-noether-9bd3a9.netlify.app/
+https://covidwatcher.netlify.app/
 ```
 
 
