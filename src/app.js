@@ -6,7 +6,7 @@ import { fetchData } from './api/index'
 export default class App extends React.Component {
   state = {
     data: {},
-    country: 'Lebanon',
+    country: '',
   }
   handleCountryChange = async (country) => {
     // console.log(country)

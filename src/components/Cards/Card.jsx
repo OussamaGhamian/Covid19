@@ -16,7 +16,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.card, styles.infected)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography  gutterBottom>
               Infected
             </Typography>
             <Typography variant="h5" style={{ color: "blue" }}>
@@ -27,7 +27,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 separator=","
               />
             </Typography>
-            <Typography color="textSecondary">
+            <Typography >
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2"># active cases of Covid-19</Typography>
@@ -41,7 +41,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.card, styles.recovered)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography  gutterBottom>
               Recovered
             </Typography>
             <Typography variant="h5" style={{ color: "green" }}>
@@ -52,7 +52,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 separator=","
               />
             </Typography>{" "}
-            <Typography color="textSecondary">
+            <Typography >
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2"># recoveries from Covid-19</Typography>
@@ -66,7 +66,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.death, styles.card)}
         >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography  gutterBottom>
               Deaths
             </Typography>
             <Typography variant="h5" style={{ color: "red" }}>
@@ -77,7 +77,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 separator=","
               />
             </Typography>{" "}
-            <Typography color="textSecondary">
+            <Typography >
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2"># deaths caused by Covid19</Typography>

@@ -1,5 +1,11 @@
 .container {
   margin: 50px 0;
+  padding: 15px;
+  border-radius: 10px;
+  background: #14262f;
+  -webkit-box-shadow: 20px 20px 60px #112028, -20px -20px 60px #172c36;
+          box-shadow: 20px 20px 60px #112028, -20px -20px 60px #172c36;
+  color: grey !important;
 }
 
 .container .card {
@@ -7,9 +13,10 @@
   border-radius: 50%;
   text-align: center;
   padding: -10px !important;
-  background: #ffffff;
-  -webkit-box-shadow: inset 3px 3px 5px #d9d9d9, inset -3px -3px 5px #ffffff;
-          box-shadow: inset 3px 3px 5px #d9d9d9, inset -3px -3px 5px #ffffff;
+  background: #14262f;
+  -webkit-box-shadow: inset 20px 20px 60px #112028, inset -20px -20px 60px #172c36;
+          box-shadow: inset 20px 20px 60px #112028, inset -20px -20px 60px #172c36;
+  color: grey !important;
 }
 
 .container .infected {

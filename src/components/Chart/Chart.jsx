@@ -9,7 +9,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
     const fetchApi = async () => {
       setDailyData(await fetchDailyData());
     };
-    console.log(dailyData);
+    console.log(country);
     fetchApi();
   }, [setDailyData]);
   const lineChart = dailyData.length ? (
@@ -21,13 +21,14 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             data: dailyData.map(({ confirmed }) => confirmed),
             label: "Infected",
             borderColor: "#3333ff",
+            backgroundColor: "rgba(0 ,0,255,.1)",
             fill: true,
           },
           {
             data: dailyData.map(({ deaths }) => deaths),
             label: "Deaths",
             borderColor: "red",
-            backgroundColor: "rgba(255 ,0,0,.5)",
+            backgroundColor: "rgba(255 ,0,0,.3)",
             fill: true,
           },
         ],
@@ -37,14 +38,14 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const barChart = confirmed ? (
     <Bar
       data={{
-        labels: ["infected ", "recovered" , "deaths"],
+        labels: ["infected ", "recovered", "deaths"],
         datasets: [
           {
             label: "People",
             backgroundColor: [
-              "rgba(0,0,255,.5)",
-              "rgba(0,255,0,.5)",
-              "rgba(255,0,0,.5)",
+              "rgba(0,0,255,.3)",
+              "rgba(0,255,0,.3)",
+              "rgba(255,0,0,.3)",
             ],
             data: [confirmed.value, recovered.value, deaths.value],
           },

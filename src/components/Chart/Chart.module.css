@@ -1,5 +1,5 @@
 .container {
-  width: 100% !important;
+  width: 80% !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,6 +9,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: #14262f;
+  -webkit-box-shadow: 20px 20px 60px #112028, -20px -20px 60px #172c36;
+          box-shadow: 20px 20px 60px #112028, -20px -20px 60px #172c36;
+  color: grey !important;
 }
 
 @media (max-width: 770px) {
