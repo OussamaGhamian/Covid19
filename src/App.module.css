@@ -1,9 +1,8 @@
-body {
-  background-color: #14262f;
-  color: white !important;
+html {
+  background: #b1babf;
 }
 
-body .container {
+html body .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,11 +16,5 @@ body .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media (max-width: 770px) {
-  body .container {
-    margin: 0px 10%;
-  }
 }
 /*# sourceMappingURL=App.module.css.map */

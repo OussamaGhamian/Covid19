@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { fetchDailyData } from "../../api";
 import { Line, Bar } from "react-chartjs-2";
 import styles from "./Chart.module.css";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
+  const { isLightTheme, light, dark } = useContext(ThemeContext);
+  const theme = isLightTheme ? light : dark;
   const [dailyData, setDailyData] = useState([]);
   useEffect(() => {
     const fetchApi = async () => {
@@ -58,7 +61,16 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
     />
   ) : null;
   return (
-    <div className={styles.container}>{country ? barChart : lineChart}</div>
+    <div
+      className={styles.container}
+      style={{
+        backgroundColor: theme.bg,
+        boxShadow: theme.boxShadow,
+        color: theme.color,
+      }}
+    >
+      {country ? barChart : lineChart}
+    </div>
   );
 };
 export default Chart;

@@ -2,8 +2,11 @@ import React from 'react'
 import styles from './App.module.css'
 import { Card, CountryPicker, Chart } from './components/index'
 import { fetchData } from './api/index'
+import {ThemeContext} from './contexts/ThemeContext'
+import ToggleTheme from './components/ToggleTheme/ToggleTheme'
 
 export default class App extends React.Component {
+  static contextType = ThemeContext
   state = {
     data: {},
     country: '',
@@ -22,12 +25,18 @@ export default class App extends React.Component {
   }
   render() {
     const { data, country } = this.state;
-    return (
-      <div className={styles.container}>
-        <Card data={data} />
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
-      </div>
+    // console.log(ThemeContext)
+    const { isLightTheme, dark, light } = this.context;
+    console.log(isLightTheme, dark, light)
+    const theme = isLightTheme ? light : dark
+    
+    return (  
+        <div className={styles.container} style={{ background: theme.bg }}>
+          <ToggleTheme />
+          <Card data={data} />
+          <CountryPicker handleCountryChange={this.handleCountryChange} />
+          <Chart data={data} country={country} />
+        </div>
     )
   }
 }

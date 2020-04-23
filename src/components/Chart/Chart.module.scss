@@ -5,12 +5,13 @@
   align-items: center;
   padding: 15px;
   border-radius: 10px;
-  background: #14262f;
-  box-shadow: 20px 20px 60px #112028, -20px -20px 60px #172c36;
-  color: grey !important;
+  margin-bottom: 50px;
+  // background: #14262f;
+  // box-shadow: 20px 20px 60px #112028, -20px -20px 60px #172c36;
+  // color: grey !important;
 }
 @media (max-width: 770px) {
   .container {
-    width: 100% !important;
+    // width: 100% !important;
   }
 }

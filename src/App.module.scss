@@ -1,15 +1,17 @@
-body {
-  background-color: #14262f;
-  color: white!important;
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (max-width: 770px) {
+html{
+  background: rgb(177, 186, 191);
+  body{
+ 
     .container {
-      margin: 0px 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
+}
+@media (max-width: 770px) {
+  // .container {
+  //   margin: 0px 10%;
+  // }
 }
